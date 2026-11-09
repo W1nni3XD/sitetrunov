@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Брендбук — Ticket Flow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header class="topnav">
+  <div class="wrap">
+    <div class="brand"><img src="ticket-flow-logo.png" alt="Ticket Flow"> Брендбук</div>
+    <nav>
+      <a href="#colors">Цвета</a>
+      <a href="#infographics">Инфографика</a>
+      <a href="#type">Шрифты</a>
+      <a href="#persona">Персона</a>
+      <a href="#guide">Инструкция</a>
+      <a href="#logo">Логотип</a>
+      <a href="#cheat">Сводка</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><i></i> личный брендбук - курсовой проект</div>
+    <h1>Визуальный язык <em>Ticket Flow</em></h1>
+    <p>Здесь собраны основные правила оформления Ticket Flow: цвета, шрифты, логотип и элементы интерфейса. Они помогают сохранить единый стиль на всех страницах сервиса.</p>
+    <div class="logo-row">
+      <img src="ticket-flow-logo.png" alt="Ticket Flow logo">
+      <span>Основной логотип проекта.<br>Правила использования — в разделе «Логотип».</span>
+    </div>
+    <div class="meta-row">
+      <div><b>Формат</b>HTML + CSS, лонгрид</div>
+      <div><b>Проект</b>Ticket Flow</div>
+      <div><b>Тип</b>Личный брендбук</div>
+      <div><b>Год</b>2026</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="tag"><i></i>О документе</div>
+    <h2>Зачем нужен брендбук</h2>
+    <p class="lead">Брендбук фиксирует визуальные решения проекта в виде понятных правил, чтобы любой элемент интерфейса — от кнопки до страницы — выглядел последовательно. Ниже разобраны пять составляющих: <b>цветовая палитра</b>, <b>правила инфографики</b>, <b>шрифтовая система</b>, <b>персона пользователя</b> и <b>руководство пользователя</b> — с пояснением, почему выбрано именно так, а не иначе, и как это повторить.</p>
+    <div class="note">Все значения (цвета, размеры шрифтов, отступы) взяты из реального интерфейса Ticket Flow и описаны здесь как единый источник правды. Каждый раздел читается самостоятельно: цвет и шрифт заданы как CSS-переменные в коде страницы (<span class="mono">:root{}</span>), поэтому их легко скопировать и повторить в своём макете.</div>
+  </div>
+</section>
+
+<section class="section" id="colors">
+  <div class="wrap">
+    <div class="tag"><i></i>Цвет</div>
+    <h2>Цветовая палитра</h2>
+    <p class="lead">Основные цвета сайта — тёмно-синий и бирюзовый. Синий задаёт спокойный и надёжный вид, а бирюзовый помогает выделить важные кнопки, ссылки и статусы.</p>
+
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="fill" style="background:#0f1b41">Primary</div>
+        <div class="info"><b>Navy</b><span class="mono">#0F1B41</span><span>Основной. Хедер, кнопки, акцентные блоки</span></div>
+      </div>
+      <div class="swatch">
+        <div class="fill" style="background:#1dc8a8;color:#06251f">Accent</div>
+        <div class="info"><b>Teal</b><span class="mono">#1DC8A8</span><span>Акцент. CTA, статус «доступно», ссылки</span></div>
+      </div>
+      <div class="swatch">
+        <div class="fill" style="background:#080e20">Surface</div>
+        <div class="info"><b>Deep</b><span class="mono">#080E20</span><span>Тёмный фон. Hero, футер, тёмные секции</span></div>
+      </div>
+      <div class="swatch">
+        <div class="fill light" style="background:#f5f7fa">Base</div>
+        <div class="info"><b>Paper</b><span class="mono">#F5F7FA</span><span>Фон страниц. Рабочая, читаемая поверхность</span></div>
+      </div>
+    </div>
+
+    <p class="lead" style="margin-top:34px">Функциональные цвета сообщают состояние — доступность места, предупреждение, ошибку. Они не пересекаются с основной палитрой, чтобы статус считывался мгновенно.</p>
+    <div class="func-grid">
+      <div class="func"><i style="background:var(--teal)"></i><div><b>Доступно / успех</b><span class="mono">#1DC8A8</span></div></div>
+      <div class="func"><i style="background:var(--warn)"></i><div><b>Выбрано / внимание</b><span class="mono">#F3C66B</span></div></div>
+      <div class="func"><i style="background:var(--err)"></i><div><b>Занято / ошибка</b><span class="mono">#E87979</span></div></div>
+    </div>
+
+    <div class="dd-grid">
+      <div class="dd ok">
+        <div class="label">ТАК ДЕЛАЕМ</div>
+        <p>Бирюза используется точечно — только для одного главного действия на экране (кнопка, активный статус). Текст на тёмном navy/deep — белый или светло-серый #B6C2D7.</p>
+      </div>
+      <div class="dd bad">
+        <div class="label">ТАК НЕ ДЕЛАЕМ</div>
+        <p>Нельзя заливать бирюзой большие площади фона или использовать её для обычного текста — при низком контрасте текст теряет читаемость.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="infographics">
+  <div class="wrap">
+    <div class="tag"><i></i>Инфографика</div>
+    <h2>Правила инфографики</h2>
+    <p class="lead">Диаграммы должны выглядеть так же, как остальные элементы сайта. Для них используются те же цвета и шрифты.</p>
+
+    <div class="logo-rules" style="margin-top:28px">
+      <div class="rule"><b>1. Только палитра бренда</b><span>Фон диаграммы — Navy/Deep, подписи — Paper/White, единственный акцентный цвет — Teal для главного значения. Никаких сторонних цветов.</span></div>
+      <div class="rule"><b>2. Один график — одна идея</b><span>Диаграмма отвечает на один вопрос (доля, сравнение, контраст). Нельзя смешивать разные метрики в одной визуализации.</span></div>
+      <div class="rule"><b>3. Шрифты как в системе</b><span>Числа и значения на осях — JetBrains Mono (моно для выравнивания цифр), заголовки и подписи — Inter/Montserrat, как в остальном макете.</span></div>
+      <div class="rule"><b>4. Тип графика под задачу</b><span>Доли и пропорции — кольцевая/столбчатая диаграмма; сравнение величин — горизонтальные полосы; шаги процесса — горизонтальная шкала.</span></div>
+      <div class="rule"><b>5. Текстовый вывод обязателен</b><span>Под каждой диаграммой — 1–2 предложения с выводом: инфографика не должна требовать отдельной расшифровки от читателя.</span></div>
+    </div>
+
+    <p class="lead" style="margin-top:40px">Ниже приведены два примера: распределение цветов и проверка контрастности текста.</p>
+
+    <div class="infobox">
+      <h4>Баланс цвета (60 / 30 / 10)</h4>
+      <div class="sub">Условная доля каждого цвета на типичном экране интерфейса</div>
+      <svg viewBox="0 0 760 230" width="100%" height="230" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(115,115)">
+          <circle r="90" fill="none" stroke="#1c2a52" stroke-width="34"/>
+          <circle r="90" fill="none" stroke="#f5f7fa" stroke-width="34"
+            stroke-dasharray="169.6 395.8" stroke-dashoffset="0" transform="rotate(-90)"/>
+          <circle r="90" fill="none" stroke="#1dc8a8" stroke-width="34"
+            stroke-dasharray="56.5 509" stroke-dashoffset="-169.6" transform="rotate(-90)"/>
+          <text text-anchor="middle" y="-4" fill="#fff" font-family="Montserrat" font-weight="700" font-size="22">60/30/10</text>
+          <text text-anchor="middle" y="18" fill="#8ea0ba" font-family="Inter" font-size="10">правило баланса</text>
+        </g>
+        <g font-family="Inter" font-size="12" fill="#cdd8ec">
+          <circle cx="280" cy="48" r="6" fill="#1c2a52"/><text x="296" y="53">60% — тёмный Navy/Deep: фон, хедер, крупные блоки</text>
+          <circle cx="280" cy="80" r="6" fill="#f5f7fa"/><text x="296" y="85">30% — светлый Paper: рабочие поверхности, карточки</text>
+          <circle cx="280" cy="112" r="6" fill="#1dc8a8"/><text x="296" y="117">10% — бирюза: кнопки, активные статусы, акценты</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="infobox">
+      <h4>Контраст текста (WCAG)</h4>
+      <div class="sub">Соотношение контраста ключевых пар «текст / фон» — чем длиннее столбец, тем выше контраст</div>
+      <svg viewBox="0 0 760 190" width="100%" height="190" xmlns="http://www.w3.org/2000/svg">
+        <g font-family="Inter" font-size="11" fill="#cdd8ec">
+          <text x="0" y="20">Ink на Paper</text>
+          <rect x="0" y="28" width="520" height="14" rx="7" fill="#1dc8a8"/>
+          <text x="530" y="39" font-family="JetBrains Mono" fill="#fff">15.1:1 ✓ AAA</text>
+
+          <text x="0" y="68">White на Navy</text>
+          <rect x="0" y="76" width="430" height="14" rx="7" fill="#1dc8a8"/>
+          <text x="440" y="87" font-family="JetBrains Mono" fill="#fff">11.4:1 ✓ AAA</text>
+
+          <text x="0" y="116">Teal-текст на Deep</text>
+          <rect x="0" y="124" width="290" height="14" rx="7" fill="#f3c66b"/>
+          <text x="300" y="135" font-family="JetBrains Mono" fill="#fff">4.6:1 — только для крупного текста</text>
+
+          <text x="0" y="164">Muted на White</text>
+          <rect x="0" y="172" width="250" height="14" rx="7" fill="#e87979"/>
+          <text x="260" y="183" font-family="JetBrains Mono" fill="#fff">4.1:1 — не для мелкого текста</text>
+        </g>
+      </svg>
+      <p style="font-size:11.5px;color:#9fb0ca;margin-top:16px;line-height:1.7">Вывод: основная пара текст/фон (Ink/Paper, White/Navy) легко проходит AA и AAA. Бирюзовый и приглушённый серый текст применяются только для крупных заголовков или вспомогательных подписей, а не для длинного основного текста.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="type">
+  <div class="wrap">
+    <div class="tag"><i></i>Шрифты</div>
+    <h2>Шрифтовая пара</h2>
+    <p class="lead">Для заголовков используется Montserrat. Он хорошо выделяет названия разделов и делает их заметными. Основной текст набран шрифтом Inter, который легко читать на экране.</p>
+
+    <div class="infobox">
+      <h4>Типографская шкала</h4>
+      <div class="sub">Размер, засечка назначения и параметры каждого уровня текста</div>
+
+      <div class="type-row"><div class="lbl">H1</div><div class="sample" style="font-size:44px;font-weight:800;letter-spacing:-1.5px">Заголовок</div><div class="meta">Montserrat 800 · 44px</div></div>
+      <div class="type-row"><div class="lbl">H2</div><div class="sample" style="font-size:32px;font-weight:700;letter-spacing:-1px">Заголовок раздела</div><div class="meta">Montserrat 700 · 32px</div></div>
+      <div class="type-row"><div class="lbl">H3</div><div class="sample" style="font-size:20px;font-weight:700">Подзаголовок карточки</div><div class="meta">Montserrat 700 · 20px</div></div>
+      <div class="type-row body"><div class="lbl">Body</div><div class="sample" style="font-size:15px;font-weight:400;color:var(--muted)">Основной текст интерфейса и описаний</div><div class="meta">Inter 400 · 15px</div></div>
+      <div class="type-row body"><div class="lbl">Button</div><div class="sample" style="font-size:13px;font-weight:700">Текст кнопки</div><div class="meta">Inter 700 · 13px</div></div>
+      <div class="type-row body"><div class="lbl">Caption</div><div class="sample" style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal)">Служебная подпись</div><div class="meta">Inter 700 · 11px · +2px</div></div>
+    </div>
+
+    <div class="dd-grid">
+      <div class="dd ok">
+        <div class="label">ТАК ДЕЛАЕМ</div>
+        <p>Montserrat — только для заголовков, чисел и коротких акцентов. Для служебных подписей (eyebrow) — прописные буквы с разрядкой +2px.</p>
+      </div>
+      <div class="dd bad">
+        <div class="label">ТАК НЕ ДЕЛАЕМ</div>
+        <p>Не набираем Montserrat длинные абзацы — его геометричные формы утомляют при чтении. Не смешиваем больше двух гарнитур на странице.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="persona">
+  <div class="wrap">
+    <div class="tag"><i></i>Персона пользователя</div>
+    <h2>Иллюстрация пользователя-студента</h2>
+    <p class="lead">Персона — обобщённый образ одной из ролей системы, который помогает принимать дизайн-решения: «удобно ли это конкретному человеку с его целями и ограничениями?». Ниже — персона роли <b>«Покупатель билета»</b>.</p>
+
+    <div class="persona-grid">
+      <div>
+        <div class="persona-illu">
+          <svg viewBox="0 0 280 360" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="280" height="360" rx="24" fill="#0b1530"/>
+            <ellipse cx="140" cy="340" rx="72" ry="9" fill="#000" opacity="0.22"/>
+            <rect x="104" y="250" width="30" height="78" rx="14" fill="#0f1b41"/>
+            <rect x="146" y="250" width="30" height="78" rx="14" fill="#0f1b41"/>
+            <rect x="98" y="320" width="40" height="16" rx="8" fill="#f5f7fa"/>
+            <rect x="142" y="320" width="40" height="16" rx="8" fill="#f5f7fa"/>
+            <rect x="68" y="160" width="26" height="86" rx="13" fill="#1dc8a8" transform="rotate(8 81 160)"/>
+            <circle cx="78" cy="250" r="13" fill="#f5f7fa"/>
+            <rect x="86" y="140" width="108" height="116" rx="30" fill="#1dc8a8"/>
+            <rect x="86" y="140" width="18" height="116" rx="9" fill="#0f1b41" opacity="0.45" transform="rotate(14 95 140)"/>
+            <rect x="178" y="150" width="26" height="84" rx="13" fill="#1dc8a8" transform="rotate(-34 191 150)"/>
+            <circle cx="219" cy="185" r="13" fill="#f5f7fa"/>
+            <rect x="206" y="150" width="38" height="62" rx="9" fill="#f5f7fa" stroke="#0f1b41" stroke-width="3"/>
+            <rect x="212" y="158" width="26" height="40" rx="4" fill="#0f1b41"/>
+            <rect x="217" y="168" width="16" height="12" rx="2" fill="#1dc8a8"/>
+            <line x1="225" y1="168" x2="225" y2="180" stroke="#f5f7fa" stroke-width="1.4" stroke-dasharray="2,2"/>
+            <circle cx="140" cy="100" r="46" fill="#f5f7fa"/>
+            <path d="M96,96 C96,56 184,56 184,96 L184,80 C184,48 96,48 96,80 Z" fill="#0f1b41"/>
+            <circle cx="124" cy="104" r="5" fill="#0f1b41"/>
+            <circle cx="156" cy="104" r="5" fill="#0f1b41"/>
+            <path d="M122,118 Q140,128 158,118" stroke="#0f1b41" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+          <div class="persona-id"><b>Полина, 21 год</b><span>Студентка, покупатель билета</span></div>
+        </div>
+      </div>
+
+      <div class="persona-col">
+        <div class="pcard">
+          <div class="ph"><i style="background:var(--teal)"></i><b>Цели</b></div>
+          <ul>
+            <li>Купить билет за пару минут между парами, не отвлекаясь от учёбы.</li>
+            <li>Получить электронный билет сразу на телефон, без принтера и ПК.</li>
+            <li>Увидеть скидку или промокод до оплаты, не переплатить.</li>
+          </ul>
+        </div>
+        <div class="pcard">
+          <div class="ph"><i style="background:#f3c66b"></i><b>Навыки</b></div>
+          <ul>
+            <li>Уверенно пользуется мобильными приложениями и онлайн-оплатой.</li>
+            <li>Ориентируется в интерфейсе на ходу, не читая инструкций.</li>
+            <li>Не разбирается в сложных формах и настройках вне типовых сценариев.</li>
+          </ul>
+        </div>
+        <div class="pcard">
+          <div class="ph"><i style="background:#e87979"></i><b>Трудности</b></div>
+          <ul>
+            <li>Мало свободного времени — раздражает любой процесс дольше 2–3 шагов.</li>
+            <li>Нестабильный Wi-Fi в кампусе — важна лёгкость и скорость страниц.</li>
+            <li>Ограниченный студенческий бюджет — опасается скрытых комиссий при оплате.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="lead" style="margin-top:38px">Правила визуального изображения персонажа — чтобы иллюстрация оставалась частью единой системы бренда, а не случайной картинкой:</p>
+    <div class="logo-rules">
+      <div class="rule"><b>1. Плоская геометрия</b><span>Только flat vector из простых фигур (круг, скруглённый прямоугольник). Никаких фото и 3D-рендеров.</span></div>
+      <div class="rule"><b>2. Палитра бренда</b><span>Цвета только из основной палитры: Navy, Teal, Paper, Deep — без сторонних оттенков кожи, одежды, фона.</span></div>
+      <div class="rule"><b>3. Нейтральное лицо</b><span>Максимум — два глаза-точки и одна линия-улыбка, без детальной мимики и бровей.</span></div>
+      <div class="rule"><b>4. Смартфон в кадре</b><span>Персонаж всегда со смартфоном в руке — визуальный маркер сценария «покупка на ходу».</span></div>
+      <div class="rule"><b>5. Скругления как в UI</b><span>Радиусы форм тела — 14–30px, как у карточек интерфейса: иллюстрация визуально «из одной системы» с макетами.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="guide">
+  <div class="wrap">
+    <div class="tag"><i></i>Руководство пользователя</div>
+    <h2>Как купить билет</h2>
+    <p class="lead">Ниже показано, как посетитель может купить билет через сайт, начиная с поиска мероприятия и заканчивая получением электронного билета.</p>
+
+    <div class="guide-list">
+      <div class="gstep">
+        <div class="num">1</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6" stroke="#0f1b41" stroke-width="2"/><line x1="15" y1="15" x2="20" y2="20" stroke="#0f1b41" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="body"><b>Найдите мероприятие</b><p>На главном экране — лента событий. Можно пролистать её или воспользоваться поиском/фильтром по дате и городу. Карточка события уже показывает дату, место и цену — не нужно открывать её, чтобы понять, подходит ли билет.</p></div>
+      </div>
+      <div class="gstep">
+        <div class="num">2</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="10" rx="2" stroke="#0f1b41" stroke-width="2"/><line x1="3" y1="12" x2="21" y2="12" stroke-dasharray="1.5 2" stroke="#0f1b41" stroke-width="2"/></svg></div>
+        <div class="body"><b>Выберите билет</b><p>На странице события откройте список доступных билетов/мест. Статус читается по цвету: бирюзовый — доступно, жёлтый — выбрано вами, красный — занято. Нажмите на нужный вариант — он закрепится за вами на время оформления заказа.</p></div>
+      </div>
+      <div class="gstep">
+        <div class="num">3</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#0f1b41" stroke-width="2"/><line x1="7" y1="9" x2="17" y2="9" stroke="#0f1b41" stroke-width="2" stroke-linecap="round"/><line x1="7" y1="14" x2="13" y2="14" stroke="#0f1b41" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="body"><b>Проверьте заказ</b><p>В заказе можно проверить количество билетов и итоговую сумму, а при необходимости ввести промокод. Если вы уже вошли в аккаунт, контактные данные заполняются автоматически.</p></div>
+      </div>
+      <div class="gstep">
+        <div class="num">4</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="#0f1b41" stroke-width="2"/><line x1="2" y1="9" x2="22" y2="9" stroke="#0f1b41" stroke-width="2"/></svg></div>
+        <div class="body"><b>Оплатите</b><p>Оплатить заказ можно банковской картой или через СБП. Перед оплатой на странице видны сумма и выбранный способ.</p></div>
+      </div>
+      <div class="gstep">
+        <div class="num">5</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="6" y="2" width="12" height="20" rx="2" stroke="#0f1b41" stroke-width="2"/><rect x="9" y="6" width="6" height="6" rx="1" fill="#1dc8a8"/><circle cx="12" cy="17" r="1" fill="#0f1b41"/></svg></div>
+        <div class="body"><b>Получите билет</b><p>После оплаты электронный билет с QR-кодом появится в личном кабинете. Его можно показать на входе с экрана телефона.</p></div>
+      </div>
+    </div>
+
+    <div class="note">Руководство описывает идеальный путь без ошибок. Отдельно стоит предусмотреть подсказки для нетипичных ситуаций — например, если место уже заняли, пока пользователь оформлял заказ.</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="tag"><i></i>Сетка и отступы</div>
+    <h2>Пространство и ритм</h2>
+    <p class="lead">Все отступы кратны базовой единице 4px — это упрощает вёрстку и делает плотность элементов предсказуемой.</p>
+
+    <div class="infobox">
+      <h4>Шкала отступов</h4>
+      <div class="sub">От минимального зазора между иконкой и текстом до отступа между секциями</div>
+      <div class="space-row"><div class="lbl">space-1</div><div class="px">4px</div><div class="bar" style="width:4px"></div></div>
+      <div class="space-row"><div class="lbl">space-2</div><div class="px">8px</div><div class="bar" style="width:8px"></div></div>
+      <div class="space-row"><div class="lbl">space-3</div><div class="px">16px</div><div class="bar" style="width:16px"></div></div>
+      <div class="space-row"><div class="lbl">space-4</div><div class="px">24px</div><div class="bar" style="width:24px"></div></div>
+      <div class="space-row"><div class="lbl">space-5</div><div class="px">48px</div><div class="bar" style="width:48px"></div></div>
+      <div class="space-row"><div class="lbl">space-6</div><div class="px">105px</div><div class="bar" style="width:105px"></div></div>
+
+      <h4 style="margin-top:30px">12-колоночная сетка</h4>
+      <div class="sub">Контейнер — 1160px, зазор между колонками — 18–20px</div>
+      <div class="grid-demo">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="logo">
+  <div class="wrap">
+    <div class="tag"><i></i>Логотип</div>
+    <h2>Логотип и его использование</h2>
+    <p class="lead">Логотип Ticket Flow состоит из названия и изображения билета. На светлом фоне используется цветная версия, а на тёмном — белая.</p>
+
+    <div class="logo-grid">
+      <div class="logo-card on-light"><img src="ticket-flow-logo.png" alt="Логотип на светлом фоне"></div>
+      <div class="logo-card on-dark"><img src="ticket-flow-logo.png" alt="Логотип на тёмном фоне" style="filter:brightness(0) invert(1)"></div>
+    </div>
+
+    <div class="logo-rules">
+      <div class="rule"><b>Охранное поле</b><span>Оставляйте вокруг логотипа свободное место, не размещайте рядом другие элементы.</span></div>
+      <div class="rule"><b>Минимальный размер</b><span>Не уменьшайте логотип слишком сильно. Рекомендуемая высота — не менее 20 пикселей.</span></div>
+      <div class="rule"><b>На тёмном фоне</b><span>На тёмном фоне используйте белую версию логотипа.</span></div>
+      <div class="rule"><b>Запрещено</b><span>Менять пропорции, поворачивать, накладывать на пёстрый фон без подложки.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="cheat" style="border-bottom:0">
+  <div class="wrap">
+    <div class="tag"><i></i>Сводка</div>
+    <h2>Карточка быстрого доступа</h2>
+    <p class="lead">Основные настройки оформления собраны здесь, чтобы их было удобно быстро посмотреть во время работы над сайтом.</p>
+
+    <div class="cheat">
+      <div class="tag"><i></i>ticket flow / design tokens</div>
+      <div class="grid">
+        <div>
+          <h5>Персона</h5>
+          <div class="row"><span>Роль</span><b>Покупатель билета</b></div>
+          <div class="row"><span>Главная цель</span><b>Купить билет за 2–3 шага</b></div>
+          <div class="row"><span>Контекст</span><b>Телефон, на ходу</b></div>
+          <div class="row"><span>Ограничение</span><b>Мало времени, слабый Wi-Fi</b></div>
+        </div>
+        <div>
+          <h5>Цвет</h5>
+          <div class="row"><span><span class="dot-sw" style="background:#0f1b41"></span>Navy</span><b class="mono">#0F1B41</b></div>
+          <div class="row"><span><span class="dot-sw" style="background:#1dc8a8"></span>Teal</span><b class="mono">#1DC8A8</b></div>
+          <div class="row"><span><span class="dot-sw" style="background:#080e20"></span>Deep</span><b class="mono">#080E20</b></div>
+          <div class="row"><span><span class="dot-sw" style="background:#f5f7fa"></span>Paper</span><b class="mono">#F5F7FA</b></div>
+        </div>
+        <div>
+          <h5>Шрифты</h5>
+          <div class="row"><span>Заголовки</span><b>Montserrat 700/800</b></div>
+          <div class="row"><span>Текст</span><b>Inter 400/500</b></div>
+          <div class="row"><span>Кнопка</span><b>Inter 700, 13px</b></div>
+          <div class="row"><span>Подпись</span><b>Inter 700, 11px, caps</b></div>
+        </div>
+        <div>
+          <h5>Форма</h5>
+          <div class="row"><span>Радиус карточки</span><b>14–18px</b></div>
+          <div class="row"><span>Радиус кнопки</span><b>9px</b></div>
+          <div class="row"><span>Базовый отступ</span><b>4px</b></div>
+          <div class="row"><span>Контейнер</span><b>1160px</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <b>TICKET <span style="color:#1dc8a8">FLOW</span></b>
+    <span>Личный брендбук · Курсовой проект · 2026</span>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const pct=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
+  document.getElementById('progress').style.width=pct+'%';
+});
+</script>
+</body>
+</html>
